@@ -47,16 +47,20 @@ classdef testPlatform
             fprintf(obj.Port,[char(5),char(2)],'async');
         end
 
-        function changeToChannel(obj,channel,delay)
+        function changeToChannel(obj,channel)
             fprintf(obj.Port,[char(6),char(1)], 'async');
             pause(0.3);
             fprintf(obj.Port,[char(1),char(channel)],'async');
             pause(0.1);
             fprintf(obj.Port,[char(4),char(channel)],'async');
-            pause(delay);
+            pause(2);
             fprintf(obj.Port,[char(6),char(2)], 'async');
         end
         
+        function loadChip(obj)
+            fprintf(obj.Port,[char(1),char()]);
+            pause(0.)
+        end
         
         function setFilter(obj,filterstatus)
             fprintf(obj.Port,[char(6),char(1)], 'async');

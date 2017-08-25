@@ -1,6 +1,4 @@
 disp('Move system');
-set(hp_dLED,'enable','off');
-set(hp_startA,'enable','off');
 
 tp.changeToChannel(1,5);
 
@@ -28,6 +26,4 @@ LEDc;
 LEDcontrol;
 
 
-set(hp_dLED,'enable','on');
-
-set(hp_startA,'enable','on');
+set(hp_dLED,'enable','off');
